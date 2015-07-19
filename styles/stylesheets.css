@@ -24,4 +24,11 @@ h2 {
 
 #main {
 	width: 1000px;
+	background-color: lightgrey;
+}
+
+#intro{
+	width: 1000px;
+	background-color: lightgrey;
+
 }
