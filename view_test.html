@@ -1,0 +1,50 @@
+<head>
+<title>Markdown Editor</title>
+<link rel="stylesheet" href="./styles/editor.css" />
+
+
+<script type="text/javascript" src="./scripts/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="./scripts/editor_test.js"></script>
+<script type="text/javascript" src="./scripts/epiceditor.js"></script>
+</head>
+<body>
+<div id = "main" >
+	<div id = "title">
+		新笔记标题 <input type="text" id="loadFileName" size = 100 value=" ">
+	</div>
+	<div id = "epiceditor" style='width:800px; height:200px;'></div>
+	<p><button type="button1" onclick="consolelog()">console.log</button></p>
+	<p><button type="button1" onclick="old_saveFile()">oldsave</button>
+	<input type="text" id="saveFileName" size = 10 value=" ">
+	</p>
+	<p><button type="button1" onclick="old_loadFile()">oldload</button>
+	<input type="text" id="loadFileName" size = 10 value=" ">
+	</p>	
+	<p>
+	<p><button type="button1" onclick="saveFile()">save</button>
+	<input type="text" id="saveFileName" size = 10 value=" ">
+	</p>
+	<p><button type="button1" onclick="loadFile()">load</button>
+	<input type="text" id="loadFileName" size = 10 value=" ">
+	</p>	
+
+	<script>
+		var  opt ={
+					file: {
+    					name: 'file1',
+    					defaultContent: '',
+    					autoSave: false
+  					},
+  					button: {
+    					preview: false,
+    					fullscreen: false,
+    					bar: "auto"
+  					},
+  					basePath: './'
+  				}
+		var editor = new EpicEditor(opt).load()
+		editor.preview();
+		console.log(localStorage.editor_content)
+	</script>
+</div>
+</body>
