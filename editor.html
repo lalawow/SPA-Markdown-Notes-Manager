@@ -26,7 +26,7 @@
   					basePath: './'
   				}
 		var editor = new EpicEditor(opt).load()
-		if (localStorage.editor_content === null) {
+		if (!localStorage.editor_content) {
 		localStorage.editor_content = JSON.stringify({
 			"filenumber": 0,
 			"content": []
