@@ -13,20 +13,7 @@
 		新笔记标题 <input type="text" id="loadFileName" size = 100 value=" ">
 	</div>
 	<div id = "epiceditor" style='width:800px; height:200px;'></div>
-	<p><button type="button1" onclick="consolelog()">console.log</button></p>
-	<p><button type="button1" onclick="old_saveFile()">oldsave</button>
-	<input type="text" id="saveFileName" size = 10 value=" ">
-	</p>
-	<p><button type="button1" onclick="old_loadFile()">oldload</button>
-	<input type="text" id="loadFileName" size = 10 value=" ">
-	</p>	
-	<p>
-	<p><button type="button1" onclick="saveFile()">save</button>
-	<input type="text" id="saveFileName" size = 10 value=" ">
-	</p>
-	<p><button type="button1" onclick="loadFile()">load</button>
-	<input type="text" id="loadFileName" size = 10 value=" ">
-	</p>	
+
 
 	<script>
 		var  opt ={
@@ -36,15 +23,17 @@
     					autoSave: false
   					},
   					button: {
-    					preview: false,
+    					preview: true,
     					fullscreen: false,
     					bar: "auto"
   					},
   					basePath: './'
   				}
 		var editor = new EpicEditor(opt).load()
-		editor.preview();
+
 		console.log(localStorage.editor_content)
+		editor.getElement('editor').body.innerText = JSON.parse(localStorage.editor_content).content[0].content
+		editor.preview();
 	</script>
 </div>
 </body>
