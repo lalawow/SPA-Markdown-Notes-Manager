@@ -8,17 +8,21 @@
 <script type="text/javascript" src="./scripts/jquery-2.1.3.min.js"></script>
 <script type="text/javascript" src="./scripts/main.js"></script>
 <script type="text/javascript" src="./scripts/epiceditor.js"></script>
+<script type="text/javascript" src="./scripts/notes.js"></script>
 </head>
 <body>
 	
 	<div id = "menu" >
-		<div style ="height: 100px"></div>
+		<div style ="height: 50px"></div>
 		<h1> 笔记本 </h1>
 		<h2 style= "color: white" onclick="newNote()"> 新笔记 <h2>
 		<h2 onclick= "helloworld()"> 笔记记录 <h2>
 	</div>
-	<div id = "titles" >
-	
+	<div id = "notes">
+		<div style ="height: 50px"></div>
+		<h1>笔记 </h1>
+		<div id = "notes_list">
+		</div>
 	</div>
 	<div id = "main" >
 	<iframe id = "iframe_html" src="intro.html" style = 'width: 100%; height: 100%'></iframe>

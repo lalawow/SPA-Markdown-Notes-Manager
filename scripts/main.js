@@ -16,5 +16,6 @@ eventer(messageEvent,function(e) {
   if (e.data == "intro") {
   	console.log("message got!")
   	document.getElementById('iframe_html').src = "intro.html"
+  	refresh_notes()
   }
 },false);
