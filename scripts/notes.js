@@ -57,3 +57,52 @@ var show_page = function(file_id) {
 	editor.preview();
 
 }
+
+var newNote = function() {
+ 	var main_html = '<iframe id = "iframe_html" src="editor.html" style = "width: 100%; height: 100%"></iframe>'
+    $("#main").html(main_html)
+}
+    
+/*var  opt ={
+					file: {
+    				name: 'file1',
+    				defaultContent: '',
+    				autoSave: false
+  					},
+  					basePath: './'
+  				}
+		var editor = new EpicEditor(opt).load()
+		if (!localStorage.editor_content) {
+		localStorage.editor_content = JSON.stringify({
+			"filenumber": 0,
+			"content": []
+		}) }
+		console.log(localStorage.editor_content)
+		editor.getElement('editor').body.innerText = "" 
+
+
+
+var save = function(editor) {
+	console.log(localStorage.editor_content)
+	var storage_content = JSON.parse(localStorage.editor_content)
+	console.log(storage_content)
+	var new_title = $('input[id="loadFileName"]').val()
+	var new_content = editor.getElement('editor').body.innerText
+	var new_time = new Date()
+	console.log("new title: "+new_title)
+	console.log("new content: "+new_content)
+	var file_id_number = storage_content["filenumber"] + 1
+	storage_content["filenumber"] ++
+	var new_json = {
+		id: file_id_number,
+		title: new_title,
+		content: new_content
+//		time: new_time
+	} 
+	storage_content["content"].push(new_json)
+	localStorage.editor_content = JSON.stringify(storage_content)
+    console.log(localStorage.editor_content)
+	console.log("save OK!")
+	show_page(new_json.id - 1)
+}
+*/

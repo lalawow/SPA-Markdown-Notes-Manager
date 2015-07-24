@@ -1,7 +1,3 @@
-function newNote() {
-	document.getElementById('iframe_html').src = "editor.html"
-	console.log(document.getElementById('iframe_html').src)
-}
 
 function helloworld() {
 	console.log("hello world")
@@ -13,9 +9,10 @@ var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
 
 // Listen to message from child window
 eventer(messageEvent,function(e) {
-  if (e.data == "intro") {
+  if (e.data == "saved") {
   	console.log("message got!")
-  	document.getElementById('iframe_html').src = "intro.html"
+  	var notes = JSON.parse(localStorage.editor_content)
+	show_page(notes.filenumber-1)
   	refresh_notes()
   }
 },false);
