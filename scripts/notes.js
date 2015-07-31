@@ -9,7 +9,9 @@ var refresh_notes = function() {
 	document.getElementById("notes_list").innerHTML = ""
 	for (var i = notes.filenumber - 1; i >= 0; i--) {
 		var content = notes_content[i]
-		var innerHTML = "<div class='one_note' id ="+i+"><div class='notes_title'>"+content.title+"</div><div class='notes_content'>"+content.content+"</div></div>"
+		var show_content = content.content
+		if (show_content.length > 40) show_content = show_content.substr(0,40)+"..."
+		var innerHTML = "<div class='one_note' id ="+i+"><div class='notes_title'>"+content.title+"</div><div class='notes_content'>"+show_content+"</div></div>"
 		document.getElementById("notes_list").innerHTML += innerHTML
 	}	
 
@@ -33,8 +35,7 @@ var show_page = function(file_id) {
 	var content = notes_content[parseInt(file_id)]	
 	var main_html = $("#main")
 
-	main_html.html("<h1>hello World</h1>")
-	main_html.html("<div class = 'show_page_title'>"+content.title+"</div><div id = 'epiceditor' style='width:800px; height:200px;'></div>")
+	main_html.html("<div class = 'show_page_title'>"+content.title+"</div><div id = 'epiceditor' style='width:695px; height:200px; background-color: white;'></div>")
     
 	var  opt ={
 					file: {
