@@ -10,16 +10,18 @@ var refresh_notes = function() {
 	for (var i = notes.filenumber - 1; i >= 0; i--) {
 		var content = notes_content[i]
 		var show_content = content.content
-		if (show_content.length > 40) show_content = show_content.substr(0,40)+"..."
-		var innerHTML = "<div class='one_note' id ="+i+"><div class='notes_title'>"+content.title+"</div><div class='notes_content'>"+show_content+"</div></div>"
+		if (show_content.length > 78) show_content = show_content.substr(0,76)+"..."
+		var one_note_background = (((notes.filenumber - i) % 2)==1) ? "white" : "#EDE8E8"
+		console.log(one_note_background+" "+(((notes.filenumber - i) % 2)==1)+" "+(notes.filenumber - i))
+		var innerHTML = "<div class='one_note' style = 'background-color: "+one_note_background +";' id ="+i+"><div class='notes_title'>"+content.title+"</div><div class='notes_content'>"+show_content+"</div></div>"
 		document.getElementById("notes_list").innerHTML += innerHTML
 	}	
 
 	//div's reaction with mouse over the div
 	$(".one_note").hover(function() {
-  		$(this).css("border","3px solid lightgrey")
+  		$(this).css("border","1px solid lightblue")
  	}, function(){
- 		$(this).css("border","3px solid white")
+ 		$(this).css("border","0px solid white")
  	})
 
 	$(".one_note").click(function() {
