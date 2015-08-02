@@ -11,7 +11,7 @@ var refresh_notes = function() {
 		var content = notes_content[i]
 		var show_content = content.content
 		if (show_content.length > 78) show_content = show_content.substr(0,76)+"..."
-		var one_note_background = (((notes.filenumber - i) % 2)==1) ? "white" : "#EDE8E8"
+		var one_note_background = (((notes.filenumber - i) % 2)==1) ? "white" : "#F7F7F7"
 		console.log(one_note_background+" "+(((notes.filenumber - i) % 2)==1)+" "+(notes.filenumber - i))
 		var innerHTML = "<div class='one_note' style = 'background-color: "+one_note_background +";' id ="+i+"><div class='notes_title'>"+content.title+"</div><div class='notes_content'>"+show_content+"</div></div>"
 		document.getElementById("notes_list").innerHTML += innerHTML
