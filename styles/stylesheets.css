@@ -11,7 +11,7 @@ body {
 #menu {
 	width: 200px;
 	color: gray;
-	background-color: black;
+	background-color: #191919;
 
 }
 
@@ -60,7 +60,7 @@ h3 {
     text-align: left;
     height: 55px;
     padding: 5px;
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .notes_title {
@@ -97,12 +97,30 @@ h3 {
 
 .clickableH2 {
   margin: auto; 
+  border-color: #191919;
 
-  border-color: white; 
   border-width: 2px 2px;
   border-style: solid;
-  border-top-color: grey;
-  border-left-color: grey;
   margin-top: 5px;
   margin-bottom: 5px;
+}
+
+.hoverCursor {
+	cursor: pointer;
+	border-color: white;
+	border-bottom-color: grey;
+ 	border-right-color: grey;
+
+}
+
+.clickedH2 {
+	margin: auto;
+	border-width: 2px 2px;
+    border-style: solid;
+    margin-top: 5px;
+    margin-bottom: 5px;
+	border-color: white;
+	border-top-color: grey;
+  	border-left-color: grey;
+    background-color: #0C0C0C;
 }
