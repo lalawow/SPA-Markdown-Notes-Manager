@@ -37,6 +37,8 @@ h2 {
 	margin: 5px;
 	font-size: 20px;
 	color: grey;
+  padding: 1px 1px;
+  border-width: 5px;
 
 }
 
@@ -91,4 +93,16 @@ h3 {
     display: table-cell;
     vertical-align: middle;
     width: 700px;
+}
+
+.clickableH2 {
+  margin: auto; 
+
+  border-color: white; 
+  border-width: 2px 2px;
+  border-style: solid;
+  border-top-color: grey;
+  border-left-color: grey;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
